@@ -24,7 +24,7 @@
   },
   "Outputs": {
     "testKmsKeyOutput": {
-        "Value": { "!Ref": "MyKMSKey" }
+        "Value": { "Ref": "MyKMSKey" }
     }
   }
 }
