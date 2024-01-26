@@ -10,6 +10,9 @@ pipeline {
                         kms_output = cfnUpdate(stack:"test-kms-stack", file:"test-kms.template")
                         println(kms_output)
                         println(kms_output.getClass())
+                        kms_output_id = kms_output["testKmsKeyOutput"]
+                        println(kms_output_id)
+                        println(kms_output_id.getClass())
                     }
                 }
             }
