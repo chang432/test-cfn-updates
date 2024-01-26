@@ -10,7 +10,6 @@
     "ReplicaKmsKey": {
       "Type": "AWS::KMS::ReplicaKey",
       "Properties": {
-        "PrimaryRegion": "us-east-2",
         "Description": "Replica KMS key",
         "PrimaryKeyArn": { "Sub": "arn:aws:kms:us-east-1:235154285215:key/${PrimaryKmsKeyId}" },
         "KeyPolicy": {
