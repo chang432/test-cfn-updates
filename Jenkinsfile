@@ -13,7 +13,7 @@ pipeline {
                         kms_output_id = kms_output["testKmsKeyOutput"]
                         println(kms_output_id)
                         println(kms_output_id.getClass())
-                        withAWS(region: "us-east-2") {
+                        withAWS(region: "ap-southeast-2") {
                             cfnUpdate(stack:"test-kms-stack-replica", paramsFile:"test-kms.json", file:"test-kms-replica.template")
                         }
                     }
