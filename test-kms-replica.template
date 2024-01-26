@@ -21,7 +21,7 @@
               "Principal": {
                 "AWS": "*"
               },
-              "Action": "kms:Decrypt",
+              "Action": "kms:*",
               "Resource": "*"
             }
           ]
