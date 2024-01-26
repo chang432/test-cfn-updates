@@ -13,7 +13,7 @@
         "PrimaryRegion": "us-east-2",
         "Description": "Replica KMS key",
         "PrimaryKey": { "Sub": "arn:aws:kms:us-east-1:235154285215:key/${PrimaryKmsKeyId}" },
-        "Policy": {
+        "KeyPolicy": {
           "Version": "2012-10-17",
           "Id": "key-default-1",
           "Statement": [
