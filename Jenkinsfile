@@ -13,6 +13,7 @@ pipeline {
                         kms_output_id = kms_output["testKmsKeyOutput"]
                         println(kms_output_id)
                         println(kms_output_id.getClass())
+                        cfnUpdate(stack:"test-kms-stack-replica", params: ["PrimaryKmsKeyId": kms_output_id], file:"test-kms-replica.template")
                     }
                 }
             }
