@@ -5,6 +5,7 @@
       "Type": "AWS::KMS::Key",
       "Properties": {
         "Description": "My KMS Key",
+        "MultiRegion": true,
         "KeyPolicy": {
           "Version": "2012-10-17",
           "Id": "default",
