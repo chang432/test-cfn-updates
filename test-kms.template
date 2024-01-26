@@ -1,0 +1,30 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "MyKMSKey": {
+      "Type": "AWS::KMS::Key",
+      "Properties": {
+        "Description": "My KMS Key",
+        "KeyPolicy": {
+          "Version": "2012-10-17",
+          "Id": "default",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": { "Fn::Sub": "arn:aws:iam::235154285215:root" }
+              },
+              "Action": "kms:*",
+              "Resource": "*"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Outputs" {
+    "testKmsKeyOutput": {
+        "Value": { "!Ref": "MyKMSKey" }
+    }
+  }
+}
