@@ -13,7 +13,7 @@ pipeline {
                         kms_output_id = kms_output["testKmsKeyOutput"]
                         println(kms_output_id)
                         println(kms_output_id.getClass())
-                        sh("echo \"[{\"ParameterKey\": \"PrimaryKmsKeyId\",\"ParameterValue\": \"${kms_output_id}\"}]\" > test-kms.json")
+                        sh("echo '[{\"ParameterKey\": \"PrimaryKmsKeyId\",\"ParameterValue\": \"${kms_output_id}\"}]' > test-kms.json")
                         withAWS(region: "ap-southeast-2") {
                             cfnUpdate(stack:"test-kms-stack-replica", paramsFile:"test-kms.json", file:"test-kms-replica.template")
                         }
